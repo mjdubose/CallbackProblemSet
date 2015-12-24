@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function modifyArray(array, callbackfunction) {
+
+        if (typeof(callbackfunction) === "function") {
+            var tempstring = "";
+
+            for (var i = 0; i < array.length; i++) {
+                tempstring += callbackfunction(array, i) + ',';
+            }
+            return tempstring;
+        }
+        else {
+            return array;
+        }
+    }
+    function callbackmodificationX2(array, index) {
+        return array[index] * 2;
+    }
+
+    function callbackX3(array, index) {
+        return array[index] * 3;
+    }
+
+
+    console.log(modifyArray([1, 2, 3, 4, 5, 6], callbackmodificationX2));
+    console.log(modifyArray([1, 2, 3, 4, 5, 6], callbackX3));
+
+//Exercise 3
+function map(array,funct,index){  //closest guess I have
+
+    }
+
+    map([1, 2, 3], function(value) { // returns [2,3,4]
+        return value += 1;
+    });
+
+
+
+
+
+
+</script>
+</body>
+</html>
